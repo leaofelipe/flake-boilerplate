@@ -1,0 +1,7 @@
+{
+  "name": "Smart-Boilerplate",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}

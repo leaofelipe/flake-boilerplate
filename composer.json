@@ -9,9 +9,7 @@
     "require": {
         "mustache/mustache": "~2.5"
     },
-    "extra" : {
-    	"installer-paths" : {
-        	"src/assets/vendor/php/" : ["mustache/mustache"]
-    	}
+    "config": {
+    	"vendor-dir": "src/assets/vendor/php"
 	}
 }

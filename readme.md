@@ -7,4 +7,4 @@ A Boilerplate for PHP/Javascript applications
 ![First Sketch](https://github.com/leaofelipe/smart-boilerplate/blob/master/doc/images/first-sketch.jpg "First Sketch")
 
 ### Requirements:
-- Composer (Mustache)
+- Install Composer *(curl -sS https://getcomposer.org/installer | php)*

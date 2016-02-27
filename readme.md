@@ -12,4 +12,4 @@ A Boilerplate for PHP/Javascript applications
 
 #### Run Composer and NPM Install to install dependencies
 - Composer: `php composer.phar install`  
-- NPM: `npm install --save-dev`
+- NPM: `npm install`

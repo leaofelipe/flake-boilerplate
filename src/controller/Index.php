@@ -23,6 +23,18 @@ class Index extends IPage {
 		));
 	}
 
+	protected function setHead () {
+
+	}
+
+	protected function setContent () {
+
+	}
+
+	protected function setBottom () {
+
+	}
+
 	protected function setCSS () {
 		$this->cssFile = "assets/style/style.css";
 	}

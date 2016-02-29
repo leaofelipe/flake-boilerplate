@@ -17,6 +17,9 @@ abstract class IPage {
 		));
 	}
 
+	abstract protected function setHead ();
+	abstract protected function setContent ();
+	abstract protected function setBottom ();
 	abstract protected function setCSS ();
 	abstract protected function setJavascript();
 	abstract protected function show();

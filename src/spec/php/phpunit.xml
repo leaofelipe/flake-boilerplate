@@ -1,0 +1,8 @@
+<phpunit bootstrap="bootstrap.php">
+  <testsuites>
+    <testsuite name="Index">
+		<directory></directory>
+    	<file>IndexTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

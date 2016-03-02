@@ -7,8 +7,7 @@
         }
     ],
     "require": {
-        "mustache/mustache": "~2.5",
-        "phpunit/phpunit": "4.6.*"
+        "mustache/mustache": "~2.5"
     },
     "config": {
     	"vendor-dir": "src/assets/vendor/php"

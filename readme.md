@@ -7,8 +7,9 @@ A Boilerplate for PHP/Javascript applications
 ![First Sketch](https://github.com/leaofelipe/smart-boilerplate/blob/master/doc/images/first-sketch.jpg "First Sketch")
 
 ### Requirements:
-- Install Composer: `(curl -sS https://getcomposer.org/installer | php)`  
-- Install NodeJS: [nodejs.org/](https://nodejs.org/en/)
+- Composer [getcomposer.org/](https://getcomposer.org/)  
+- NodeJS: [nodejs.org/](https://nodejs.org/en/)  
+- PHPUnit: [phpunit.de/](https://phpunit.de/)
 
 #### Run Composer and NPM Install to install dependencies
 - Composer: `php composer.phar install`  

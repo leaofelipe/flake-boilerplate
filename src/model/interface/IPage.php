@@ -1,14 +1,27 @@
 <?php
 include_once("assets/vendor/php/autoload.php");
 
+/*
+	@depends Config.php
+*/
 abstract class IPage {
+	/* Page Name. ex: index, contact, etc */
 	protected $route;
+
+	/* HTML Parts */
+	protected $head;
+	protected $bodyContent;
+	protected $bottom;
 	protected $html;
-	protected $cssFile;
-	protected $javascriptFile;
+
+	/* Template Variables */
 	protected $templateEngine;
 	protected $engineOptions = array('extension' => '.html');
 
+	/*
+		Set base Mustache Engine Path for Pages and Partials
+		@var Config::$BASE_DIRECTORY already defined on Config.php file
+	*/
 	protected function setTemplateEngine () {
 		$this->templateEngine = new Mustache_Engine(
 			array(
@@ -17,12 +30,13 @@ abstract class IPage {
 		));
 	}
 
-	abstract protected function setHead ();
-	abstract protected function setContent ();
-	abstract protected function setBottom ();
-	abstract protected function setCSS ();
-	abstract protected function setJavascript();
-	abstract protected function show();
+	protected function showPage () {
+		echo $this->html;
+	}
+
+	abstract protected function setHead (Head $head);
+	abstract protected function setBodyContent (BodyContent $content);
+	abstract protected function setBottom (Bottom $bottom);
 	abstract protected function render();
 }
 

@@ -1,5 +1,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{title}}</title>
-	<link rel="stylesheet" href="{{cssFile}}" />
+	{{#cssFiles}}
+	<link rel="stylesheet" href='{{cssFile}}' />
+	{{/cssFiles}}
 </head>

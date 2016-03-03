@@ -1,5 +1,4 @@
 <?php
-include_once("../Config.php");
 include_once("model/interface/IPage.php");
 include_once("model/Head.php");
 include_once("model/BodyContent.php");
@@ -16,7 +15,6 @@ class Index extends IPage {
 		$this->setBodyContent(new BodyContent);
 		$this->setBottom(new Bottom);
 		$this->render();
-		$this->showPage();
 	}
 
 	protected function setHead (Head $head) {
@@ -48,6 +46,4 @@ class Index extends IPage {
 		);
 	}
 }
-
-$worker = new Index();
 ?>

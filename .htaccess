@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /src/
-    DirectoryIndex controller/Index.php
+    DirectoryIndex src/controller/Client.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule .* src/controller/Client.php/$0 [L]
 </IfModule>

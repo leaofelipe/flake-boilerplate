@@ -1,5 +1,4 @@
 <?php
-
 include_once("../Config.php");
 include_once("../model/Router.php");
 function autoload ($className) {
@@ -9,17 +8,28 @@ spl_autoload_register("autoload");
 
 class Client {
 	public static $BASE_PATH;
-	private $router;
+	private $class;
+	private $page;
 
 	public function __construct () {
 		$this->setPath();
-		$router = new Router();
-		echo $router->getRoute();
+		$this->setRoute(new Router);
+		$this->setPage();
+		$this->page->showPage();
+	}
+
+	private function setRoute (Router $router) {
+		$this->class = $router->getRoute();
 	}
 
 	private function setPath () {
-		self::$BASE_PATH = basename(__FILE__);
-		set_include_path(self::$BASE_PATH);
+		chdir('../');
+		Config::$BASE_PATH = getcwd();
+		set_include_path(Config::$BASE_PATH);
+	}
+
+	private function setPage () {
+		$this->page = new $this->class;
 	}
 }
 

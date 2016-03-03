@@ -2,6 +2,8 @@
 
 class Config {
 
+	public static $BASE_PATH;
+
 	public static $CSS_FILES = array(
 		"assets/style/style.css",
 		'testeCSS'

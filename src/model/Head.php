@@ -1,8 +1,6 @@
 <?php
-/*
-	@depends Config.php
-*/
 include_once('model/interface/IModule.php');
+
 class Head extends IModule {
 	private $title;
 	private $cssFiles = array();

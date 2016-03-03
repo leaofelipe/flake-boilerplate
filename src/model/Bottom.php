@@ -1,8 +1,6 @@
 <?php
-/*
-	@depends Config.php
-*/
 include_once('model/interface/IModule.php');
+
 class Bottom extends IModule {
 	private $javascriptFiles = array();
 

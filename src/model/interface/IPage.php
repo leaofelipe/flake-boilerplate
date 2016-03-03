@@ -1,9 +1,7 @@
 <?php
+
 include_once("assets/vendor/php/autoload.php");
 
-/*
-	@depends Config.php
-*/
 abstract class IPage {
 	/* Page Name. ex: index, contact, etc */
 	protected $route;
@@ -20,17 +18,17 @@ abstract class IPage {
 
 	/*
 		Set base Mustache Engine Path for Pages and Partials
-		@var Config::$BASE_DIRECTORY already defined on Config.php file
+		@var Config::$BASE_PATH already defined on Config.php file
 	*/
 	protected function setTemplateEngine () {
 		$this->templateEngine = new Mustache_Engine(
 			array(
-    		'loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_DIRECTORY . '/view', $this->engineOptions),
-    		'partials_loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_DIRECTORY . '/view/partials', $this->engineOptions),
+    		'loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view', $this->engineOptions),
+    		'partials_loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view/partials', $this->engineOptions),
 		));
 	}
 
-	protected function showPage () {
+	public function showPage () {
 		echo $this->html;
 	}
 

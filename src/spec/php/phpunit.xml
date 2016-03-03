@@ -1,8 +1,12 @@
 <phpunit bootstrap="bootstrap.php">
   <testsuites>
-    <testsuite name="Index">
-		<directory></directory>
-    	<file>IndexTest.php</file>
+  	<testsuite name="Template Parts">
+		<directory>tests/model/modules</directory>
+		<file>HeadTest.php</file>
+    </testsuite>
+    <testsuite name="Models">
+		<directory>tests/model</directory>
+		<file>RouterTest.php</file>
     </testsuite>
   </testsuites>
 </phpunit>

@@ -16,6 +16,15 @@ abstract class IPage {
 	protected $templateEngine;
 	protected $engineOptions = array('extension' => '.html');
 
+	/* Base constructor for every IPage */
+	public function __construct () {
+		$this->setTemplateEngine();
+		$this->setHead(new Head);
+		$this->setBodyContent(new BodyContent);
+		$this->setBottom(new Bottom);
+		$this->render();
+	}
+
 	/*
 		Set base Mustache Engine Path for Pages and Partials
 		@var Config::$BASE_PATH already defined on Config.php file
@@ -24,12 +33,12 @@ abstract class IPage {
 		$this->templateEngine = new Mustache_Engine(
 			array(
     		'loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view', $this->engineOptions),
-    		'partials_loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view/partials', $this->engineOptions),
+    		'partials_loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view/partials', $this->engineOptions)
 		));
 	}
 
-	public function showPage () {
-		echo $this->html;
+	public function getHTML () {
+		return $this->html;
 	}
 
 	abstract protected function setHead (Head $head);

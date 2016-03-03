@@ -15,7 +15,7 @@ class Client {
 		$this->setPath();
 		$this->setRoute(new Router);
 		$this->setPage();
-		$this->page->showPage();
+		$this->showPage();
 	}
 
 	private function setRoute (Router $router) {
@@ -30,6 +30,10 @@ class Client {
 
 	private function setPage () {
 		$this->page = new $this->class;
+	}
+
+	private function showPage() {
+		echo $this->page->getHTML();
 	}
 }
 

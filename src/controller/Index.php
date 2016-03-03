@@ -1,4 +1,6 @@
 <?php
+
+include_once("Config.php");
 include_once("model/interface/IPage.php");
 include_once("model/Head.php");
 include_once("model/BodyContent.php");
@@ -6,16 +8,11 @@ include_once("model/modules/UserWelcome.php");
 include_once("model/modules/UserList.php");
 include_once("model/Bottom.php");
 
+/*
+	Construct method already called on IPage
+*/
 class Index extends IPage {
 	protected $route = 'index';
-
-	public function __construct () {
-		$this->setTemplateEngine();
-		$this->setHead(new Head);
-		$this->setBodyContent(new BodyContent);
-		$this->setBottom(new Bottom);
-		$this->render();
-	}
 
 	protected function setHead (Head $head) {
 		$head->setTitle('Main Page!');

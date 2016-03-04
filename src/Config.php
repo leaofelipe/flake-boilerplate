@@ -5,12 +5,11 @@ class Config {
 	public static $BASE_PATH;
 
 	public static $CSS_FILES = array(
-		"assets/style/style.css",
-		'testeCSS'
+		"assets/style/style.css"
 	);
 
 	public static $JAVASCRIPT_FILES = array(
-		"abc.js"
+		"main.js"
 	);
 
 	public static $OPTIONS = array(

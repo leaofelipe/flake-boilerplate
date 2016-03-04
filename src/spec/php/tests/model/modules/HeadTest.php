@@ -24,6 +24,7 @@ class HeadTest extends PHPUnit_Framework_TestCase {
 	public function testTitleValue (array $headContent) {
 		$this->assertNotNull($headContent['title']);
 		$this->assertInternalType(string, $headContent['title']);
+		$this->assertEquals($headContent['title'], 'My Test Title');
 	}
 
 	/**
@@ -31,6 +32,19 @@ class HeadTest extends PHPUnit_Framework_TestCase {
      */
 	public function testCssFilesDefinition (array $headContent) {
 		$this->assertInternalType('array', $headContent['cssFiles']);
+		return $headContent['cssFiles'];
+	}
+
+	/**
+     * @depends testCssFilesDefinition
+     */
+	public function testCssFilesIsSet (array $cssFiles) {
+		foreach ($cssFiles as $file) {
+			$this->assertRegExp(
+				'/.\.css$/',
+				$file['cssFile']
+			);
+		}
 	}
 }
 

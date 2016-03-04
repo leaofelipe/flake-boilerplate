@@ -3,6 +3,8 @@
   	<testsuite name="Template Parts">
 		<directory>tests/model/modules</directory>
 		<file>HeadTest.php</file>
+		<file>BodyContentTest.php</file>
+		<file>BottomContentTest.php</file>
     </testsuite>
     <testsuite name="Models">
 		<directory>tests/model</directory>

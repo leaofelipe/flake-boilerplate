@@ -15,8 +15,40 @@ A Boilerplate for PHP/Javascript applications
 - Composer: `composer install`  
 - NPM: `npm install`   
 
-### Base PHP Tests Already Created:
+##### Base PHP Tests Already Created:
 - Head  
 - BodyContent  
 - Bottom  
 - Router
+
+##### FileSystem:  
+**project/**  
+.    baseFiles  
+.    **src/**  
+.    .    config.php  
+.    .    **assets/**  
+.    .     .   **style/**  
+.    .     .   .    css files  
+.    .     .   **vendor/**  
+.    .     .   .    3rd part modules 
+.    .     .   **javascript/**  
+.    .     .   .    javascript files  
+.    .     .   **images/**  
+.    .     .   .    image files   
+.    .    **model/**  
+.    .     .   models  
+.    .     .   **interface/**  
+.    .     .   .    interfaces  
+.    .     .   **modules/**  
+.    .     .   .    modules
+.    .    **view/**
+.    .     .   views  
+.    .     .   **partials/**  
+.    .     .   .    partials  
+.    .    **controller/**  
+.    .     .  controllers  
+.    .    **helpers/**  
+.    .     .   helpers
+.    .    **base/**  
+.    .     .   base files
+

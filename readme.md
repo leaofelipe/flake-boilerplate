@@ -1,5 +1,4 @@
-Inline-style: 
-![Flake Boilerplate](https://github.com/leaofelipe/flake-boilerplate/tree/master/doc/images/flake-boilerplate.png "Flake Boilerplate")
+![Flake Boilerplate](https://github.com/leaofelipe/flake-boilerplate/blob/master/doc/images/flake-boilerplate.png "Flake Boilerplate")
  
 A Boilerplate for PHP/Javascript applications  
 *This is an experimental project*  

@@ -41,14 +41,14 @@ A Boilerplate for PHP/Javascript applications
 .    .     .   .    interfaces  
 .    .     .   **modules/**  
 .    .     .   .    modules
-.    .    **view/**
+.    .    **view/**  
 .    .     .   views  
 .    .     .   **partials/**  
 .    .     .   .    partials  
 .    .    **controller/**  
 .    .     .  controllers  
 .    .    **helpers/**  
-.    .     .   helpers
+.    .     .   helpers  
 .    .    **base/**  
 .    .     .   base files
 

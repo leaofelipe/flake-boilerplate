@@ -12,5 +12,11 @@ A Boilerplate for PHP/Javascript applications
 - PHPUnit: [phpunit.de/](https://phpunit.de/)
 
 #### Run Composer and NPM Install to install dependencies
-- Composer: `php composer.phar install`  
-- NPM: `npm install`
+- Composer: `composer install`  
+- NPM: `npm install`   
+
+### Base PHP Tests Already Created:
+- Head  
+- BodyContent  
+- Bottom  
+- Router

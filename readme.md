@@ -40,7 +40,7 @@ A Boilerplate for PHP/Javascript applications
 .    .     .   **interface/**  
 .    .     .   .    interfaces  
 .    .     .   **modules/**  
-.    .     .   .    modules
+.    .     .   .    modules  
 .    .    **view/**  
 .    .     .   views  
 .    .     .   **partials/**  

@@ -30,7 +30,7 @@ A Boilerplate for PHP/Javascript applications
 .    .     .   **style/**  
 .    .     .   .    css files  
 .    .     .   **vendor/**  
-.    .     .   .    3rd part modules 
+.    .     .   .    3rd part modules  
 .    .     .   **javascript/**  
 .    .     .   .    javascript files  
 .    .     .   **images/**  

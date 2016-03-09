@@ -11,7 +11,7 @@ class Head extends IModule {
 
 	private function setCssFiles () {
 		foreach (Config::$CSS_FILES as $file) {
-			array_push($this->cssFiles, array("cssFile"=>$file));
+			array_push($this->cssFiles, array("cssFile"=>Config::$RELATIVE_PATH ."/". $file));
 		}
 	}
 

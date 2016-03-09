@@ -10,7 +10,7 @@ class Bottom extends IModule {
 
 	private function setJavascriptFiles () {
 		foreach (Config::$JAVASCRIPT_FILES as $file) {
-			array_push($this->javascriptFiles, array("javascriptFile"=>$file));
+			array_push($this->javascriptFiles, array("javascriptFile"=>Config::$RELATIVE_PATH ."/".$file));
 		}
 	}
 

@@ -2,6 +2,7 @@
 
 class Config {
 
+	public static $RELATIVE_PATH = '/src';
 	public static $BASE_PATH;
 
 	public static $CSS_FILES = array(

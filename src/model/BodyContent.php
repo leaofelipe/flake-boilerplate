@@ -1,10 +1,10 @@
 <?php
-include_once('model/interface/IModule.php');
+include_once('model/interface/IPartial.php');
 
-class BodyContent extends IModule {
+class BodyContent extends IPartial {
 	private $content = array();
 
-	public function add (Array $newContent) {
+	public function add (array $newContent) {
 		$this->content = array_merge($this->content, $newContent);
 	}
 

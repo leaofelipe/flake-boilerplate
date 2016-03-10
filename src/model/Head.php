@@ -1,8 +1,8 @@
 <?php
-include_once('model/interface/IModule.php');
+include_once('model/interface/IPartial.php');
 
-class Head extends IModule {
-	private $title;
+class Head extends IPartial {
+	protected $title;
 	private $cssFiles = array();
 
 	public function __construct () {
@@ -15,17 +15,16 @@ class Head extends IModule {
 		}
 	}
 
-	public function setTitle ($title) {
+	protected function setTitle ($title) {
 		$this->title = $title;
 	}
 
 	public function getContent () {
-		return array(
+		return array (
 			'title'=>$this->title,
 			'cssFiles'=>$this->cssFiles
 		);
 	}
-
 }
 
 ?>

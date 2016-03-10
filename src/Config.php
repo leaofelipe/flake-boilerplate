@@ -10,7 +10,7 @@ class Config {
 	);
 
 	public static $JAVASCRIPT_FILES = array(
-		"main.js"
+		"assets/javascript/main.js"
 	);
 
 	public static $OPTIONS = array(

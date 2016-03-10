@@ -4,25 +4,28 @@ include_once("model/BodyContent.php");
 
 class BodyContentTest extends PHPUnit_Framework_TestCase {
 
+	private $bodyContent;
+
 	protected function setUp() {
 		$this->bodyContent = new BodyContent();
-		$this->bodyContent->add(array('Test!'=>'My Value'));
 	}
-
 
 	public function testGetContent () {
 		$content = $this->bodyContent->getContent();
 		$this->assertInternalType('array', $content);
-		return $bodyContent;
+		return $content;
 	}
 
-	public function testAddContent () {
-		$this->bodyContent->add(array('Other Content'=>'Other Value'));
+	/**
+     * @depends testGetContent
+     */
+	public function testAdd (array $content) {
+		$newContent = array('Array of Content');
+		$this->assertEmpty($content);
+		$this->bodyContent->add($newContent);
 		$content = $this->bodyContent->getContent();
-		$this->assertCount(2, $content);
+		$this->assertNotCount(0, $content);
 	}
-
 }
-
 
 ?>

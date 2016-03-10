@@ -1,7 +1,7 @@
 <?php
-include_once('model/interface/IModule.php');
+include_once('model/interface/IPartial.php');
 
-class Bottom extends IModule {
+class Bottom extends IPartial {
 	private $javascriptFiles = array();
 
 	public function __construct () {

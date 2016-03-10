@@ -15,7 +15,7 @@ class Index extends IPage {
 	protected $route = 'index';
 
 	protected function setHead (Head $head) {
-		$head->setTitle('Main Page!');
+		$head->set(array('title'=>'Main Page!'));
 		$this->head = $head->getContent();
 	}
 

@@ -1,14 +1,13 @@
 <phpunit bootstrap="bootstrap.php">
   <testsuites>
   	<testsuite name="Template Parts">
-		<directory>tests/model/modules</directory>
+		<directory>tests/router</directory>
+  	</testsuite>
+  	<testsuite name="Template Parts">
+		<directory>tests/templateBase</directory>
 		<file>HeadTest.php</file>
 		<file>BodyContentTest.php</file>
-		<file>BottomContentTest.php</file>
-    </testsuite>
-    <testsuite name="Models">
-		<directory>tests/model</directory>
-		<file>RouterTest.php</file>
+		<file>BottomTest.php</file>
     </testsuite>
   </testsuites>
 </phpunit>

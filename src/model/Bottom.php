@@ -14,8 +14,8 @@ class Bottom extends IPartial {
 		}
 	}
 
-	public function getContent () {
-		return array('javascriptFiles'=>$this->javascriptFiles);
+	public function setContent () {
+		$this->content = array('javascriptFiles'=>$this->javascriptFiles);
 	}
 
 }

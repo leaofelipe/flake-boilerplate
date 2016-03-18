@@ -2,7 +2,12 @@
 include_once("model/interface/IBase.php");
 
 abstract class IPartial extends IBase  {
-	abstract function getContent();
+	protected $content;
+	abstract protected function setContent();
+
+	public function getContent () {
+		return $this->content;
+	}
 }
 
 

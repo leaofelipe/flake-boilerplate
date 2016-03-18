@@ -3,10 +3,9 @@
 include_once("Config.php");
 include_once("model/interface/IPage.php");
 include_once("model/Head.php");
-include_once("model/BodyContent.php");
-include_once("model/modules/UserWelcome.php");
-include_once("model/modules/UserList.php");
+include_once("model/Content.php");
 include_once("model/Bottom.php");
+include_once("model/partials/HeaderContent.php");
 
 /*
 	Construct method already called on IPage
@@ -19,12 +18,11 @@ class Index extends IPage {
 		$this->head = $head->getContent();
 	}
 
-	protected function setBodyContent (BodyContent $bodyContent) {
-		$userWelcome = new UserWelcome();
-		$usersList = new UsersList();
-		$bodyContent->add($userWelcome->getContent());
-		$bodyContent->add($usersList->getContent());
-		$this->bodyContent = $bodyContent->getContent();
+	protected function setBodyContent (Content $content) {
+		$headerContent = new HeaderContent();
+		$headerContent->setTitle('It Works!');
+		$content->add($userWelcome->getContent());
+		$this->content = $content->getContent();
 	}
 
 	protected function setBottom (Bottom $bottom) {

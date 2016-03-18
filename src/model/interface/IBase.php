@@ -2,11 +2,10 @@
 
 abstract class IBase {
 	/*
-	 * Apenas seta os valores que existem na Classe e ignora os que não existem
+	 * Set Class Values and Ignores any unexisted attribute
 	*/
 	public function set($attributeValues) {
 		if (!is_array($attributeValues)) return;
-
 		$classAttributes = get_class_vars(get_class($this));
 
 		foreach ($attributeValues as $attribute => $value) {

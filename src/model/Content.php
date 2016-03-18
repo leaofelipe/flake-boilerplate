@@ -1,8 +1,8 @@
 <?php
 include_once('model/interface/IPartial.php');
 
-class BodyContent extends IPartial {
-	private $content = array();
+class ContentStack extends IPartial {
+	protected $content = array();
 
 	public function add (array $newContent) {
 		$this->content = array_merge($this->content, $newContent);

@@ -1,13 +1,7 @@
 <phpunit bootstrap="bootstrap.php">
   <testsuites>
-  	<testsuite name="Template Parts">
-		<directory>tests/router</directory>
+  	<testsuite name="Flake Boilerplate">
+		  <directory>tests/base</directory>
   	</testsuite>
-  	<testsuite name="Template Parts">
-		<directory>tests/templateBase</directory>
-		<file>HeadTest.php</file>
-		<file>BodyContentTest.php</file>
-		<file>BottomTest.php</file>
-    </testsuite>
   </testsuites>
 </phpunit>

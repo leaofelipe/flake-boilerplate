@@ -10,12 +10,21 @@ class Bottom extends IPartial {
 
 	private function setJavascriptFiles () {
 		foreach (Config::$JAVASCRIPT_FILES as $file) {
-			array_push($this->javascriptFiles, array("javascriptFile"=>Config::$RELATIVE_PATH ."/".$file));
+			array_push(
+				$this->javascriptFiles,
+				array(
+					"javascriptFile"=>Config::$RELATIVE_PATH ."/".$file
+				)
+			);
 		}
 	}
 
-	public function setContent () {
-		$this->content = array('javascriptFiles'=>$this->javascriptFiles);
+	private function getJavascriptFiles () {
+		return $this->javascriptFiles;
+	}
+
+	public function getContent () {
+		return array('javascriptFiles'=>$this->getJavascriptFiles());
 	}
 
 }

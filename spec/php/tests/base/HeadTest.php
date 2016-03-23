@@ -1,6 +1,7 @@
 <?php
 
 include_once("model/Head.php");
+include_once("../spec/php/helpers/getPrivateMethod.php");
 
 class HeadTest extends PHPUnit_Framework_TestCase {
 
@@ -16,10 +17,8 @@ class HeadTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testGetCssFiles () {
-		$reflect = new ReflectionClass('Head');
-		$methodGet = $reflect->getMethod('getCssFiles');
-		$methodGet->setAccessible(true);
-		$cssFiles = $methodGet->invokeArgs($this->head, array());
+		$method = getPrivateMethod($this->head, 'getCssFiles');
+		$cssFiles = $method->invokeArgs($this->head, array());
 
 		$this->assertInternalType('array', $cssFiles);
 		return $cssFiles;

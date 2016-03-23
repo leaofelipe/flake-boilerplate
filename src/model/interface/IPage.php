@@ -20,7 +20,7 @@ abstract class IPage {
 	public function __construct () {
 		$this->setTemplateEngine();
 		$this->setHead(new Head);
-		$this->setBodyContent(new Content);
+		$this->setBody(new Body);
 		$this->setBottom(new Bottom);
 		$this->render();
 	}
@@ -42,7 +42,7 @@ abstract class IPage {
 	}
 
 	abstract protected function setHead (Head $head);
-	abstract protected function setBodyContent (Content $content);
+	abstract protected function setBodyContent (Body $content);
 	abstract protected function setBottom (Bottom $bottom);
 	abstract protected function render();
 }

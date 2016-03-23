@@ -1,50 +1,64 @@
 <?php
 
 include_once("assets/vendor/php/autoload.php");
+include_once("model/Head.php");
+include_once("model/Body.php");
+include_once("model/Bottom.php");
 
 abstract class IPage {
-	/* Page Name. ex: index, contact, etc */
-	protected $route;
-
-	/* HTML Parts */
-	protected $head;
-	protected $bodyContent;
-	protected $bottom;
-	protected $html;
-
-	/* Template Variables */
-	protected $templateEngine;
+    /* Mustache/Template Variables */
 	protected $engineOptions = array('extension' => '.html');
+	protected $templateEngine;
 
-	/* Base constructor for every IPage */
-	public function __construct () {
-		$this->setTemplateEngine();
-		$this->setHead(new Head);
-		$this->setBody(new Body);
-		$this->setBottom(new Bottom);
-		$this->render();
-	}
+	/* Page base Variables */
+	protected $head;
+	protected $body;
+	protected $bottom;
 
 	/*
 		Set base Mustache Engine Path for Pages and Partials
 		@var Config::$BASE_PATH already defined on Config.php file
 	*/
-	protected function setTemplateEngine () {
+	protected function triggerTemplateEngine () {
 		$this->templateEngine = new Mustache_Engine(
 			array(
-    		'loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view', $this->engineOptions),
-    		'partials_loader' => new Mustache_Loader_FilesystemLoader(Config::$BASE_PATH . '/view/partials', $this->engineOptions)
+    		'loader' => new Mustache_Loader_FilesystemLoader(
+    			Config::$BASE_PATH . '/view', $this->engineOptions
+    		),
+    		'partials_loader' => new Mustache_Loader_FilesystemLoader(
+    			Config::$BASE_PATH . '/view/partials', $this->engineOptions
+    		)
 		));
 	}
 
-	public function getHTML () {
-		return $this->html;
+	public function getRoute() {
+		return $this->route;
+	}
+
+	protected function getHead () {
+		return $this->head;
+	}
+
+	protected function getBody () {
+		return $this->body;
+	}
+
+	protected function getBottom () {
+		return $this->bottom;
 	}
 
 	abstract protected function setHead (Head $head);
-	abstract protected function setBodyContent (Body $content);
+	abstract protected function setBody (Body $body);
 	abstract protected function setBottom (Bottom $bottom);
-	abstract protected function render();
+
+	public function render() {
+		$this->triggerTemplateEngine();
+		$content = array_merge($this->head, $this->body, $this->bottom);
+		return $this->templateEngine->render(
+			$this->route,
+			$content
+		);
+	}
 }
 
 ?>

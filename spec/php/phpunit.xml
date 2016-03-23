@@ -2,5 +2,7 @@
   	<testsuite name="Flake Boilerplate">
 		<file>tests/ConfigTest.php</file>
 		<directory>tests/base</directory>
+		<directory>tests/partials</directory>
+		<directory>tests/pages</directory>
   	</testsuite>
 </phpunit>

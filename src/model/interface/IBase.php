@@ -15,10 +15,6 @@ abstract class IBase {
 		}
 	}
 
-	public function get($attribute) {
-		return (property_exists($this, $attribute)) ? $this->$attribute : false;
-	}
-
 	public function toJSON() {
 		$objectAttributes = get_object_vars($this);
 		foreach ($objectAttributes as $attribute => $value) {

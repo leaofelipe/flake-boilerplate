@@ -1,5 +1,6 @@
 <phpunit bootstrap="bootstrap.php">
   	<testsuite name="Flake Boilerplate">
 		<file>tests/ConfigTest.php</file>
+		<directory>tests/base</directory>
   	</testsuite>
 </phpunit>

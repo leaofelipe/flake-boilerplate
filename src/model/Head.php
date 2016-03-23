@@ -19,10 +19,18 @@ class Head extends IPartial {
 		$this->title = $title;
 	}
 
-	public function setContent () {
-		$this->content = array (
-			'title'=>$this->title,
-			'cssFiles'=>$this->cssFiles
+	public function getTitle () {
+		return $this->title;
+	}
+
+	protected function getCssFiles () {
+		return $this->cssFiles;
+	}
+
+	public function getContent () {
+		return array (
+			'title'=>$this->getTitle(),
+			'cssFiles'=>$this->getCssFiles()
 		);
 	}
 }
